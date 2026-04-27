@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cjkmsqo20ie40"]
+
+[ext_resource type="Script" uid="uid://cd7k3qfqumhm8" path="res://level.gd" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://slw122nn8f7n" path="res://ball.tscn" id="2_vonw3"]
+[ext_resource type="Script" uid="uid://cwp3o0g6rimbu" path="res://ball.gd" id="3_oi3di"]
+
+[node name="level" type="Node2D" unique_id=774466836]
+script = ExtResource("1_u52ul")
+
+[node name="ball" parent="." unique_id=1908718429 instance=ExtResource("2_vonw3")]
+position = Vector2(543, 317)
+script = ExtResource("3_oi3di")
