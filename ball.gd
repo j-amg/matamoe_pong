@@ -11,10 +11,10 @@ var speed = 200
 func _ready():
 	# Put the ball in the middle of the screen
 	
-	modulate = Color(randf_range(0,255), randf_range(0,255),randf_range(0,255))
+	#modulate = Color(randf_range(0,255), randf_range(0,255),randf_range(0,255))
 	position = get_viewport_rect().size / 2
-	var scaleval = randf_range(.1, 5.0)
-	scale = Vector2(scaleval, scaleval)
+	#var scaleval = randf_range(.1, 5.0)
+	#scale = Vector2(scaleval, scaleval)
 	
 	speed = randf_range(20, 1000)
 	
