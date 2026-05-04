@@ -25,3 +25,7 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Matamoe Pong"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)

@@ -11,10 +11,10 @@ var speed = 200
 func _ready():
 	# Put the ball in the middle of the screen
 	
-	#modulate = Color(randf_range(0,255), randf_range(0,255),randf_range(0,255))
+	$Sprite2D.modulate = Color(randf_range(0,1), randf_range(0,1),randf_range(0,1))
 	position = get_viewport_rect().size / 2
-	#var scaleval = randf_range(.1, 5.0)
-	#scale = Vector2(scaleval, scaleval)
+	var scaleval = randf_range(1, 3.0)
+	scale = Vector2(scaleval, scaleval)
 	
 	speed = randf_range(20, 1000)
 	
@@ -47,6 +47,7 @@ func _physics_process(delta):
 	
 	# If we hit something...
 	if collision:
+		$AudioStreamPlayer2D.play()
 		#"bounce" is a handy function that reflects the velocity perfectly
 		velocity = velocity.bounce(collision.get_normal())
 		
