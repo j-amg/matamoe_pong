@@ -1,5 +1,7 @@
 extends Node2D
 
+var score = 0
+
 var ballScene = preload("res://ball.tscn")
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -13,5 +15,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func spawn_ball(pos: Vector2):
 	var ball = ballScene.instantiate()
+	ball.out_of_bounds.connect(_on_ball_exited)
 	add_child(ball)
 	ball.position = pos
+	
+func _on_ball_exited():
+	score += 1
+	$CanvasLayer/Label.text = "Score: " + str(score)
