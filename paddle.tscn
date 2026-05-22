@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bh85ui7snl2rh" path="res://paddle.gd" id="1_0sbc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut3sq"]
-size = Vector2(32, 255)
+size = Vector2(256, 32)
 
 [sub_resource type="Gradient" id="Gradient_0sbc1"]
 offsets = PackedFloat32Array(0)
@@ -11,14 +11,13 @@ colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tbytw"]
 gradient = SubResource("Gradient_0sbc1")
-width = 32
-height = 256
+width = 256
+height = 32
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1666322503]
 script = ExtResource("1_0sbc1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466677365]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ut3sq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=934580885]
