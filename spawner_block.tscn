@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://py2xte7xvovq"]
+
+[ext_resource type="PackedScene" uid="uid://bn6p6ges44637" path="res://block.tscn" id="1_wl1qp"]
+[ext_resource type="Script" uid="uid://udp47wbbsctj" path="res://spawner_block.gd" id="2_2saqp"]
+
+[node name="block" unique_id=501859107 instance=ExtResource("1_wl1qp")]
+script = ExtResource("2_2saqp")
+
+[node name="ColorRect" parent="." index="1" unique_id=728437861]
+color = Color(1.540184e-06, 0.63103014, 0.45650715, 1)

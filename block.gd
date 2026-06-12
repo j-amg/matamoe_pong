@@ -1,8 +1,11 @@
 extends StaticBody2D
 
 class_name Block
-signal block_broken
+
+@export var colorRect: ColorRect
+
+signal broken
 
 func break_block():
-	emit_signal("block_broken")
+	emit_signal("broken", self)
 	queue_free();

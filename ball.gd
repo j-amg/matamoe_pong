@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 signal out_of_bounds
 
-var speed = 200
+var speed = 500
 
 func _ready():
 	
@@ -23,8 +23,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 
 	if collision:
-		# $AudioStreamPlayer2D.play()
 		velocity = velocity.bounce(collision.get_normal())
-		if collision.has_method("break_block"):
-			collision.break_block()
+		if collision.get_collider() is Block:
+			collision.get_collider().break_block()
 			
